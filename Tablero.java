@@ -1,7 +1,7 @@
 public class Tablero extends javax.swing.JFrame {
 public Tablero() {
 initComponents();
-this.setSize(1920, 1080);
+this.setSize(900, 920);
 this.setLocationRelativeTo(null);
 this.setTitle("Tablero");
 }
