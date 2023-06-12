@@ -37,10 +37,50 @@ public class LogisticaSesion {
         if (encontrarUser(username) != null){
             return false;
         }
+        users usuario=new users(username,contra);
+        
+        if (usuariosDisponibles==0){
+            usuarios[0]=usuario;
+            usuariosDisponibles++;
+            return true;
+        }
+        
+        int incremento=usuarios.length+1;
+        users newuser[]=new users[incremento];
+        
+        for (int i=0;i<usuarios.length;i++){
+            newuser[i]=usuarios[i];
+        }
+        
+        newuser[incremento-1]=usuario;
+        usuarios=newuser;
+        usuariosDisponibles++;
         return true;
-        
-        
+    }
+    
+    public users Login(String username, String password){
+        for (users user:usuarios){
+            if (user==null) continue;
+            if (user.getNombre().equals(username) && user.getContra().equals(password)){
+                actualUser=user;
+                return user;
+            }
             
+        }
+        return null;
+    }
+    
+    public String[] getAllUsername(){
+        String usernames[]=new String[usuarios.length];
         
+        for (int i=0;i<usuarios.length;i++){
+            usernames[i]=usuarios[i].getNombre();
+        }
+        
+        return usernames;
+    }
+    
+    public void cerrarSesion(){
+        actualUser=null;
     }
 }

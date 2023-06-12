@@ -3,20 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyectostratego;
-
+import javax.swing.*;
 /**
  *
  * @author levir
  */
 public class Login extends javax.swing.JFrame {
-
+    LogisticaSesion manage;
     /**
      * Creates new form Login
      */
+    
+    
     public Login() {
         initComponents();
+        
+        manage=new LogisticaSesion();
     }
 
+    public void setManage(LogisticaSesion manage){
+        this.manage=manage;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -157,7 +164,16 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionActionPerformed
-
+        String username=jTextField1.getText();
+        String password=jPasswordField1.getSelectedText();
+        
+        users actUser= manage.Login(username, password);
+        if (actUser == null) {
+            JOptionPane.showMessageDialog(null, "ERROR. Credenciales incorrectas.");
+            return;
+        }
+        this.dispose();
+        
     }//GEN-LAST:event_iniciarSesionActionPerformed
 
     private void volverARegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverARegistroActionPerformed

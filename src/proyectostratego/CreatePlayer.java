@@ -3,13 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyectostratego;
-
+import javax.swing.*;
 /**
  *
  * @author levir
  */
 public class CreatePlayer extends javax.swing.JFrame {
-
+    LogisticaSesion manage;
     /**
      * Creates new form CreatePlayer
      */
@@ -150,11 +150,29 @@ public class CreatePlayer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
+        String username=jTextField1.getText();
+        String password=jTextField2.getText();
         
+        manage.encontrarUser(username);
+        if (manage.encontrarUser(username)==null){
+            if (password.length()!=5){
+                JOptionPane.showMessageDialog(rootPane, "Ingrese una contraseña que contenga exactamente 5 caracteres");
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "Se ha ingresado el usuario de manera correcta");
+                
+                manage.createPlayer(username, password);
+                Login inicio=new Login();
+                inicio.setManage(manage);
+                inicio.setVisible(true);
+                this.dispose();
+            }
+        }
     }//GEN-LAST:event_registrarActionPerformed
 
     private void VolverLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverLoginActionPerformed
-      
+        Login newmenu=new Login();
+        newmenu.setManage(manage);
+        newmenu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_VolverLoginActionPerformed
 
