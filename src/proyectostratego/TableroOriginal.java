@@ -4,7 +4,9 @@ import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
 public class TableroOriginal extends javax.swing.JFrame {
+private String[][] tablero = new String[10][10];
 public TableroOriginal() {
 initComponents();
 this.setSize(900, 920);
@@ -31,14 +33,25 @@ if (coordenadasProhibidas.contains(currentCoordinate)) {
 // No permite el movimiento hacia celdas prohibidas
 System.out.println("Movimiento no permitido");
 } else {
-// Permite el movimiento
 System.out.println("Movimiento permitido");
-// Agrega aquí la lógica para mover la ficha
 }
 });
 }
 }
+ 
 }
+private void iniciarTablero() {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                tablero[i][j] = "";
+
+}
+        }
+for (int i = 0; i < 10; i++) {
+    
+}
+}
+
 private int getXCoordinate(JButton button) {
 return (button.getX() - jPanel1.getX()) / button.getWidth();
 }
@@ -131,8 +144,8 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton20 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
@@ -163,93 +176,123 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
 
         jPanel1.setLayout(new java.awt.GridLayout(10, 10));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Black Widow (1).png"))); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton1);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/elektra (1).png"))); // NOI18N
         jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton3);
 
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Nightcrawler (1).png"))); // NOI18N
         jButton11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton11);
 
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/doctor_strange (1) (1).png"))); // NOI18N
         jButton10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton10);
 
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/JeanGreyPhoenix (1).png"))); // NOI18N
         jButton21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton21);
 
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Storm (1).png"))); // NOI18N
         jButton27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton27);
 
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ice Man.jpg"))); // NOI18N
         jButton31.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton31);
 
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Spider girl (1).png"))); // NOI18N
         jButton33.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton33);
 
+        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Gambito2.jpg"))); // NOI18N
         jButton49.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton49);
 
+        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Colossus.jpg"))); // NOI18N
         jButton41.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton41);
 
+        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Beast.jpg"))); // NOI18N
         jButton61.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton61);
 
+        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Giant man (1).png"))); // NOI18N
         jButton60.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton60);
 
+        jButton66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/She Hulk.jpg"))); // NOI18N
         jButton66.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton66);
 
+        jButton65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Emma Frost.jpg"))); // NOI18N
         jButton65.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton65);
 
+        jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thing.jpg"))); // NOI18N
         jButton76.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton76);
 
+        jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Blado.jpg"))); // NOI18N
         jButton75.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton75);
 
+        jButton92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Punisher.jpg"))); // NOI18N
         jButton92.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton92);
 
+        jButton91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ghost Rider.jpg"))); // NOI18N
         jButton91.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton91);
 
+        jButton95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Invisible Woman.jpg"))); // NOI18N
         jButton95.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton95);
 
+        jButton94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Cyclops.jpg"))); // NOI18N
         jButton94.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton94);
 
+        jButton93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Human Torch.jpg"))); // NOI18N
         jButton93.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton93);
 
+        jButton87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thor.jpg"))); // NOI18N
         jButton87.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton87);
 
+        jButton86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ironman.jpg"))); // NOI18N
         jButton86.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton86);
 
+        jButton83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Hulk.jpg"))); // NOI18N
         jButton83.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton83);
 
+        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Silver Surfer.jpg"))); // NOI18N
         jButton58.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton58);
 
+        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Daredevil.jpg"))); // NOI18N
         jButton54.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton54);
 
+        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Namor.jpg"))); // NOI18N
         jButton53.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton53);
 
+        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Wolverine.jpg"))); // NOI18N
         jButton52.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton52);
 
+        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Spider man (1).png"))); // NOI18N
         jButton47.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton47);
 
+        jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Nick Fury.jpg"))); // NOI18N
         jButton69.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton69);
 
@@ -410,13 +453,13 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton25);
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/33.jpg"))); // NOI18N
-        jButton24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jButton24);
-
         jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/355.jpg"))); // NOI18N
         jButton23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton23);
+
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/33.jpg"))); // NOI18N
+        jButton24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jButton24);
 
         jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/34.jpg"))); // NOI18N
         jButton22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
