@@ -386,33 +386,43 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton30);
 
+        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/27.jpg"))); // NOI18N
         jButton32.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton32);
 
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/28.jpg"))); // NOI18N
         jButton29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton29);
 
+        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/29.jpg"))); // NOI18N
         jButton28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton28);
 
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/30.jpg"))); // NOI18N
         jButton20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton20);
 
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/31 (1).jpg"))); // NOI18N
         jButton26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton26);
 
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/32.jpg"))); // NOI18N
         jButton25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton25);
 
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/33.jpg"))); // NOI18N
         jButton24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton24);
 
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/355.jpg"))); // NOI18N
         jButton23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton23);
 
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/34.jpg"))); // NOI18N
         jButton22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton22);
 
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/35.jpg"))); // NOI18N
         jButton19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton19);
 
@@ -432,21 +442,27 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton15);
 
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/23.jpg"))); // NOI18N
         jButton14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton14);
 
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/24.png"))); // NOI18N
         jButton13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton13);
 
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thanos (1).png"))); // NOI18N
         jButton12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton12);
 
+        jButton125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/25.jpg"))); // NOI18N
         jButton125.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton125);
 
+        jButton124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/deadpool_icon___png_by_axeswy-d6.png"))); // NOI18N
         jButton124.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton124);
 
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/26.jpg"))); // NOI18N
         jButton9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton9);
 
