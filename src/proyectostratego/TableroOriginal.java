@@ -38,20 +38,16 @@ System.out.println("Movimiento permitido");
 });
 }
 }
- 
 }
 private void iniciarTablero() {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 tablero[i][j] = "";
-
 }
         }
-for (int i = 0; i < 10; i++) {
-    
+for (int i = 0; i < 10; i++) {   
 }
 }
-
 private int getXCoordinate(JButton button) {
 return (button.getX() - jPanel1.getX()) / button.getWidth();
 }
