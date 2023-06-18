@@ -21,9 +21,7 @@ public class Login extends javax.swing.JFrame {
         manage=new LogisticaSesion();
     }
 
-    public void setManage(LogisticaSesion manage){
-        this.manage=manage;
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -163,9 +161,12 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void setManage(LogisticaSesion manager){
+        this.manage=manager;
+    }
     private void iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionActionPerformed
         String username=jTextField1.getText();
-        String password=jPasswordField1.getSelectedText();
+        String password=new String(jPasswordField1.getPassword());
         
         users actUser= manage.Login(username, password);
         if (actUser == null) {
@@ -173,11 +174,11 @@ public class Login extends javax.swing.JFrame {
             return;
         }
         this.dispose();
-        
+        new menuDeJuego().setVisible(true);
     }//GEN-LAST:event_iniciarSesionActionPerformed
 
     private void volverARegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverARegistroActionPerformed
-        new CreatePlayer().setVisible(true);
+        new CreatePlayer(manage).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverARegistroActionPerformed
 
@@ -188,37 +189,7 @@ public class Login extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton iniciarSesion;
