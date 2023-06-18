@@ -17,4 +17,14 @@ public class users {
    public String getContra(){
        return contrasena;
    }
+   
+   public void setNombre(String username){
+       this.username=username;
+   }
+   
+   public void setContra(String contrasena){
+       this.contrasena=contrasena;
+       
+       
+   }
 }
