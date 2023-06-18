@@ -1,6 +1,7 @@
 package proyectostratego;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 public class Controlador1 implements ActionListener{
 private String[][] tablero=new String[10][10];
@@ -249,13 +250,14 @@ return null;
  @Override
     public void actionPerformed(ActionEvent ae) {
     if(turnoJugador=='A'){
-     posicionActual= getBotonPosicionString(ae.getSource());
-     if( comprobarSiLaFichaEsBlanca(posicionActual)){
-         posicionAntigua=posicionActual;
+        String posicionActual = getBotonPosicionString(ae.getSource());
+        Object posicionAntigua = null;
+     if( comprobarFicha(posicionActual)){
+      posicionAntigua = posicionActual;
      }else if(posicionAntigua!=null){
-     posicionNueva=posicionActual;
+            String posicionNueva = posicionActual;
      //if(esPosibleEsteMovimiento(posicionAntigua,posicionNueva)){
-         cambiarFichas(posicionAntigua,posicionNueva);
+         cambiarFichas((String) posicionAntigua,posicionNueva);
          posicionNueva=null;
          posicionAntigua=null;
      //}
@@ -266,7 +268,7 @@ return null;
     private void cambiarFichas(String posAntigua,String posNueva){
     cambiarEnString(posAntigua,posNueva);
     cambiarEnPantalla(posAntigua,posNueva);
-    comprobarUltimaFila;
+    comprobarUltimaFila();
     }
 private void cambiarEnString(String posAntigua,String posNueva){
 //posAntigua="";
@@ -488,7 +490,7 @@ private JButton boton(String posicion) {
     return null;
     }
 }
-private boolean comprobarSiLaFichaEsBlanca(String posicion){
+private boolean comprobarFicha (String posicion){
 int x = Character.getNumericValue(posicion.charAt(1));
 int y = Character.getNumericValue(posicion.charAt(0));
 if(!tablero[y][x].equals("")){
@@ -500,14 +502,14 @@ private void comprobarUltimaFila(){
 for(int i=0;i<10;i++){
 if(tablero[0][i].equals("")){   
 }
-
 if(tablero[9][i].equals("")){
 tablero[9][i]="";
 String posicion="9"+i;
-boton(posicion)
+boton(posicion).setIcon(new ImageIcon(getClass().getResource("/proyectostratego/vip(1).png")));
 }
 }
 }
-
-
-
+private String getBotonPosicionString(Object source) {
+throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+}
+}
