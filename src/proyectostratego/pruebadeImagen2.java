@@ -15,6 +15,7 @@ public class pruebadeImagen2 extends javax.swing.JFrame {
      */
     public pruebadeImagen2() {
         initComponents();
+        manage=new LogisticaSesion();
     }
 
     /**
