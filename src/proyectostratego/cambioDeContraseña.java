@@ -160,9 +160,10 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     }//GEN-LAST:event_chaPassActionPerformed
 
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
-        JOptionPane.showConfirmDialog(rootPane, "Esta seguro");
-        
+        int a=JOptionPane.showConfirmDialog(rootPane, "¿Seguro?");
+        if (a==JOptionPane.YES_OPTION){
         new menuDeJuego(manage).setVisible(true);
+        }
     }//GEN-LAST:event_menuActionPerformed
 
    

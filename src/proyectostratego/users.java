@@ -4,10 +4,14 @@ package proyectostratego;
 
 public class users {
    private String username, contrasena;
+   private int puntos, gamesVillanos, gamesHeroes;
    
    public users(String username, String contrasena){
        this.username=username;
        this.contrasena=contrasena;
+       puntos=0;
+       gamesVillanos=0;
+       gamesHeroes=0;
    }
    
    public String getNombre(){

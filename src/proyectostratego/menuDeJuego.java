@@ -158,7 +158,7 @@ public class menuDeJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutActionPerformed
 
     private void perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilActionPerformed
-        new MiPerfil().setVisible(true);
+        new MiPerfil(usuarios,manage).setVisible(true);
     }//GEN-LAST:event_perfilActionPerformed
 
     
