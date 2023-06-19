@@ -15,9 +15,10 @@ public class menuDeJuego extends javax.swing.JFrame {
     /**
      * Creates new form menuDeJuego
      */
-    public menuDeJuego(LogisticaSesion manage) {
+    public menuDeJuego(LogisticaSesion manage, users usuarios) {
         initComponents();
         this.manage=manage;
+        this.usuarios=usuarios;
     }
 
     /**
@@ -149,7 +150,7 @@ public class menuDeJuego extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "A JUGAR SE HA DICHO ENTONCES");
         }else{
             manage.logout();
-            Login ini=new Login();
+            Login ini=new Login(usuarios);
             ini.setManage(manage);
             this.dispose();
             new pruebadeImagen2().setVisible(true);

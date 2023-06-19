@@ -10,6 +10,7 @@ import javax.swing.*;
  */
 public class CreatePlayer extends javax.swing.JFrame {
     LogisticaSesion manage;
+    users usuarios;
     /**
      * Creates new form CreatePlayer
      */
@@ -162,7 +163,7 @@ public class CreatePlayer extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "Se ha ingresado el usuario de manera correcta");
                 
                 manage.createPlayer(username, password);
-                Login inicio=new Login();
+                Login inicio=new Login(usuarios);
                 inicio.setManage(manage);
                 inicio.setVisible(true);
                 this.dispose();
@@ -171,7 +172,7 @@ public class CreatePlayer extends javax.swing.JFrame {
     }//GEN-LAST:event_registrarActionPerformed
 
     private void VolverLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverLoginActionPerformed
-        Login newmenu=new Login();
+        Login newmenu=new Login(usuarios);
         newmenu.setManage(manage);
         newmenu.setVisible(true);
         this.dispose();

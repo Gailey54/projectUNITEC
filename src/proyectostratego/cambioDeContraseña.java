@@ -163,7 +163,7 @@ public class cambioDeContraseña extends javax.swing.JFrame {
         int a=JOptionPane.showConfirmDialog(rootPane, "¿Seguro?");
         if (a==JOptionPane.YES_OPTION){
             manage.logout();
-            new menuDeJuego(manage).setVisible(true);
+            new menuDeJuego(manage,user).setVisible(true);
         }
     }//GEN-LAST:event_menuActionPerformed
 

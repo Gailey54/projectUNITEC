@@ -10,14 +10,15 @@ import javax.swing.*;
  */
 public class Login extends javax.swing.JFrame {
     LogisticaSesion manage;
+    users usuarios;
     /**
      * Creates new form Login
      */
     
     
-    public Login() {
+    public Login(users usuarios) {
         initComponents();
-        
+        this.usuarios=usuarios;
         manage=new LogisticaSesion();
     }
 
@@ -174,7 +175,7 @@ public class Login extends javax.swing.JFrame {
             return;
         }
         this.dispose();
-        new menuDeJuego(manage).setVisible(true);
+        new menuDeJuego(manage,usuarios).setVisible(true);
     }//GEN-LAST:event_iniciarSesionActionPerformed
 
     private void volverARegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverARegistroActionPerformed
