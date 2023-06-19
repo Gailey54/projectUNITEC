@@ -1,53 +1,49 @@
 package proyectostratego;
+
 import java.awt.Component;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.awt.Component;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
 public class TableroOriginal extends javax.swing.JFrame {
-private String[][] tablero = new String[10][10];
 public TableroOriginal() {
-initComponents();
-this.setSize(900, 920);
-this.setLocationRelativeTo(null);
-this.setTitle("Tablero");
-ArrayList<Object> coordenadasProhibidas = new ArrayList<>();
-coordenadasProhibidas.add(new Point(2,5 ));
-coordenadasProhibidas.add(new Point(2, 4));
-coordenadasProhibidas.add(new Point(3, 4));
-coordenadasProhibidas.add(new Point(3, 5));
-coordenadasProhibidas.add(new Point(6,5 ));
-coordenadasProhibidas.add(new Point(6, 4));
-coordenadasProhibidas.add(new Point(7, 4));
-coordenadasProhibidas.add(new Point(7, 5));
- for (Component component : jPanel1.getComponents()) {
-if (component instanceof JButton) {
-JButton button = (JButton) component;
-button.addActionListener((ActionEvent e) -> {
-int x1 = getXCoordinate(button);
-int y1 = getYCoordinate(button);
-Point currentCoordinate = new Point(x1, y1);
-// Verifica si la celda actual está en la lista de coordenadas prohibidas
-if (coordenadasProhibidas.contains(currentCoordinate)) {
-// No permite el movimiento hacia celdas prohibidas
-System.out.println("Movimiento no permitido");
-} else {
-System.out.println("Movimiento permitido");
-}
-});
-}
-}
-}
-private void iniciarTablero() {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                tablero[i][j] = "";
-}
+        initComponents();
+        this.setSize(900, 920);
+        this.setLocationRelativeTo(null);
+        this.setTitle("Tablero");
+
+        ArrayList<Object> coordenadasProhibidas = new ArrayList<>();
+        coordenadasProhibidas.add(new Point(2, 5));
+        coordenadasProhibidas.add(new Point(2, 4));
+        coordenadasProhibidas.add(new Point(3, 4));
+        coordenadasProhibidas.add(new Point(3, 5));
+        coordenadasProhibidas.add(new Point(6, 5));
+        coordenadasProhibidas.add(new Point(6, 4));
+        coordenadasProhibidas.add(new Point(7, 4));
+        coordenadasProhibidas.add(new Point(7, 5));
+
+        for (Component component : jPanel1.getComponents()) {
+            if (component instanceof JButton) {
+                JButton button = (JButton) component;
+                button.addActionListener((ActionEvent e) -> {
+                    int x1 = getXCoordinate(button);
+                    int y1 = getYCoordinate(button);
+                    Point currentCoordinate = new Point(x1, y1);
+                    // Verifica si la celda actual está en la lista de coordenadas prohibidas
+                    if (coordenadasProhibidas.contains(currentCoordinate)) {
+                        // No permite el movimiento hacia celdas prohibidas
+                        JOptionPane.showMessageDialog(this, "Movimiento no permitido");
+                    }
+                });
+            }
         }
-for (int i = 0; i < 10; i++) {   
-}
-}
+    }
 private int getXCoordinate(JButton button) {
 return (button.getX() - jPanel1.getX()) / button.getWidth();
 }
@@ -140,8 +136,8 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton20 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
@@ -172,123 +168,93 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
 
         jPanel1.setLayout(new java.awt.GridLayout(10, 10));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Black Widow (1).png"))); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton1);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/elektra (1).png"))); // NOI18N
         jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton3);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Nightcrawler (1).png"))); // NOI18N
         jButton11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton11);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/doctor_strange (1) (1).png"))); // NOI18N
         jButton10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton10);
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/JeanGreyPhoenix (1).png"))); // NOI18N
         jButton21.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton21);
 
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Storm (1).png"))); // NOI18N
         jButton27.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton27);
 
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ice Man.jpg"))); // NOI18N
         jButton31.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton31);
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Spider girl (1).png"))); // NOI18N
         jButton33.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton33);
 
-        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Gambito2.jpg"))); // NOI18N
         jButton49.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton49);
 
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Colossus.jpg"))); // NOI18N
         jButton41.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton41);
 
-        jButton61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Beast.jpg"))); // NOI18N
         jButton61.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton61);
 
-        jButton60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Giant man (1).png"))); // NOI18N
         jButton60.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton60);
 
-        jButton66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/She Hulk.jpg"))); // NOI18N
         jButton66.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton66);
 
-        jButton65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Emma Frost.jpg"))); // NOI18N
         jButton65.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton65);
 
-        jButton76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thing.jpg"))); // NOI18N
         jButton76.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton76);
 
-        jButton75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Blado.jpg"))); // NOI18N
         jButton75.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton75);
 
-        jButton92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Punisher.jpg"))); // NOI18N
         jButton92.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton92);
 
-        jButton91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ghost Rider.jpg"))); // NOI18N
         jButton91.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton91);
 
-        jButton95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Invisible Woman.jpg"))); // NOI18N
         jButton95.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton95);
 
-        jButton94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Cyclops.jpg"))); // NOI18N
         jButton94.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton94);
 
-        jButton93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Human Torch.jpg"))); // NOI18N
         jButton93.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton93);
 
-        jButton87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thor.jpg"))); // NOI18N
         jButton87.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton87);
 
-        jButton86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ironman.jpg"))); // NOI18N
         jButton86.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton86);
 
-        jButton83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Hulk.jpg"))); // NOI18N
         jButton83.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton83);
 
-        jButton58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Silver Surfer.jpg"))); // NOI18N
         jButton58.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton58);
 
-        jButton54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Daredevil.jpg"))); // NOI18N
         jButton54.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton54);
 
-        jButton53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Namor.jpg"))); // NOI18N
         jButton53.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton53);
 
-        jButton52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Wolverine.jpg"))); // NOI18N
         jButton52.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton52);
 
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Spider man (1).png"))); // NOI18N
         jButton47.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton47);
 
-        jButton69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Nick Fury.jpg"))); // NOI18N
         jButton69.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton69);
 
@@ -425,123 +391,93 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         jButton30.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton30);
 
-        jButton32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/27.jpg"))); // NOI18N
         jButton32.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton32);
 
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/28.jpg"))); // NOI18N
         jButton29.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton29);
 
-        jButton28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/29.jpg"))); // NOI18N
         jButton28.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton28);
 
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/30.jpg"))); // NOI18N
         jButton20.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton20);
 
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/31 (1).jpg"))); // NOI18N
         jButton26.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton26);
 
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/32.jpg"))); // NOI18N
         jButton25.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton25);
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/355.jpg"))); // NOI18N
-        jButton23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jButton23);
-
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/33.jpg"))); // NOI18N
         jButton24.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton24);
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/34.jpg"))); // NOI18N
+        jButton23.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jButton23);
+
         jButton22.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton22);
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/35.jpg"))); // NOI18N
         jButton19.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton19);
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/16.jpg"))); // NOI18N
         jButton18.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton18);
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/20.jpg"))); // NOI18N
         jButton17.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton17);
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/21.jpg"))); // NOI18N
         jButton16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton16);
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/22.jpg"))); // NOI18N
         jButton15.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton15);
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/23.jpg"))); // NOI18N
         jButton14.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton14);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/24.png"))); // NOI18N
         jButton13.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton13);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Thanos (1).png"))); // NOI18N
         jButton12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton12);
 
-        jButton125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/25.jpg"))); // NOI18N
         jButton125.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton125);
 
-        jButton124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/deadpool_icon___png_by_axeswy-d6.png"))); // NOI18N
         jButton124.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton124);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/26.jpg"))); // NOI18N
         jButton9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton9);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Black Cat (1) (1).png"))); // NOI18N
         jButton8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton8);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/sent (1).png"))); // NOI18N
         jButton4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/Ele.jpg"))); // NOI18N
         jButton5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton5);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/vip (1).png"))); // NOI18N
         jButton6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/lea.jpg"))); // NOI18N
         jButton7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton7);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/sandy.jpg"))); // NOI18N
         jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton2);
 
-        jButton90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/12.jpg"))); // NOI18N
         jButton90.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton90);
 
-        jButton126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/13.jpg"))); // NOI18N
         jButton126.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton126);
 
-        jButton127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/14.jpg"))); // NOI18N
         jButton127.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton127);
 
-        jButton128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectostratego/15.jpg"))); // NOI18N
         jButton128.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jButton128);
 
@@ -557,7 +493,7 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 822, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -589,6 +525,8 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         }
     //</editor-fold>
     //</editor-fold>
+    //</editor-fold>
+    //</editor-fold>
     
         //</editor-fold>
         //</editor-fold>
@@ -601,106 +539,106 @@ return (button.getY() - jPanel1.getY()) / button.getHeight();
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton10;
-    public javax.swing.JButton jButton11;
-    public javax.swing.JButton jButton12;
-    public javax.swing.JButton jButton124;
-    public javax.swing.JButton jButton125;
-    public javax.swing.JButton jButton126;
-    public javax.swing.JButton jButton127;
-    public javax.swing.JButton jButton128;
-    public javax.swing.JButton jButton13;
-    public javax.swing.JButton jButton14;
-    public javax.swing.JButton jButton15;
-    public javax.swing.JButton jButton16;
-    public javax.swing.JButton jButton17;
-    public javax.swing.JButton jButton18;
-    public javax.swing.JButton jButton19;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton20;
-    public javax.swing.JButton jButton21;
-    public javax.swing.JButton jButton22;
-    public javax.swing.JButton jButton23;
-    public javax.swing.JButton jButton24;
-    public javax.swing.JButton jButton25;
-    public javax.swing.JButton jButton26;
-    public javax.swing.JButton jButton27;
-    public javax.swing.JButton jButton28;
-    public javax.swing.JButton jButton29;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton30;
-    public javax.swing.JButton jButton31;
-    public javax.swing.JButton jButton32;
-    public javax.swing.JButton jButton33;
-    public javax.swing.JButton jButton34;
-    public javax.swing.JButton jButton35;
-    public javax.swing.JButton jButton36;
-    public javax.swing.JButton jButton37;
-    public javax.swing.JButton jButton38;
-    public javax.swing.JButton jButton39;
-    public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton40;
-    public javax.swing.JButton jButton41;
-    public javax.swing.JButton jButton42;
-    public javax.swing.JButton jButton43;
-    public javax.swing.JButton jButton44;
-    public javax.swing.JButton jButton45;
-    public javax.swing.JButton jButton46;
-    public javax.swing.JButton jButton47;
-    public javax.swing.JButton jButton48;
-    public javax.swing.JButton jButton49;
-    public javax.swing.JButton jButton5;
-    public javax.swing.JButton jButton50;
-    public javax.swing.JButton jButton51;
-    public javax.swing.JButton jButton52;
-    public javax.swing.JButton jButton53;
-    public javax.swing.JButton jButton54;
-    public javax.swing.JButton jButton55;
-    public javax.swing.JButton jButton56;
-    public javax.swing.JButton jButton57;
-    public javax.swing.JButton jButton58;
-    public javax.swing.JButton jButton59;
-    public javax.swing.JButton jButton6;
-    public javax.swing.JButton jButton60;
-    public javax.swing.JButton jButton61;
-    public javax.swing.JButton jButton62;
-    public javax.swing.JButton jButton63;
-    public javax.swing.JButton jButton64;
-    public javax.swing.JButton jButton65;
-    public javax.swing.JButton jButton66;
-    public javax.swing.JButton jButton67;
-    public javax.swing.JButton jButton68;
-    public javax.swing.JButton jButton69;
-    public javax.swing.JButton jButton7;
-    public javax.swing.JButton jButton70;
-    public javax.swing.JButton jButton71;
-    public javax.swing.JButton jButton72;
-    public javax.swing.JButton jButton73;
-    public javax.swing.JButton jButton74;
-    public javax.swing.JButton jButton75;
-    public javax.swing.JButton jButton76;
-    public javax.swing.JButton jButton77;
-    public javax.swing.JButton jButton78;
-    public javax.swing.JButton jButton79;
-    public javax.swing.JButton jButton8;
-    public javax.swing.JButton jButton80;
-    public javax.swing.JButton jButton81;
-    public javax.swing.JButton jButton82;
-    public javax.swing.JButton jButton83;
-    public javax.swing.JButton jButton84;
-    public javax.swing.JButton jButton85;
-    public javax.swing.JButton jButton86;
-    public javax.swing.JButton jButton87;
-    public javax.swing.JButton jButton88;
-    public javax.swing.JButton jButton89;
-    public javax.swing.JButton jButton9;
-    public javax.swing.JButton jButton90;
-    public javax.swing.JButton jButton91;
-    public javax.swing.JButton jButton92;
-    public javax.swing.JButton jButton93;
-    public javax.swing.JButton jButton94;
-    public javax.swing.JButton jButton95;
+    public static javax.swing.JButton jButton1;
+    public static javax.swing.JButton jButton10;
+    public static javax.swing.JButton jButton11;
+    public static javax.swing.JButton jButton12;
+    public static javax.swing.JButton jButton124;
+    public static javax.swing.JButton jButton125;
+    public static javax.swing.JButton jButton126;
+    public static javax.swing.JButton jButton127;
+    public static javax.swing.JButton jButton128;
+    public static javax.swing.JButton jButton13;
+    public static javax.swing.JButton jButton14;
+    public static javax.swing.JButton jButton15;
+    public static javax.swing.JButton jButton16;
+    public static javax.swing.JButton jButton17;
+    public static javax.swing.JButton jButton18;
+    public static javax.swing.JButton jButton19;
+    public static javax.swing.JButton jButton2;
+    public static javax.swing.JButton jButton20;
+    public static javax.swing.JButton jButton21;
+    public static javax.swing.JButton jButton22;
+    public static javax.swing.JButton jButton23;
+    public static javax.swing.JButton jButton24;
+    public static javax.swing.JButton jButton25;
+    public static javax.swing.JButton jButton26;
+    public static javax.swing.JButton jButton27;
+    public static javax.swing.JButton jButton28;
+    public static javax.swing.JButton jButton29;
+    public static javax.swing.JButton jButton3;
+    public static javax.swing.JButton jButton30;
+    public static javax.swing.JButton jButton31;
+    public static javax.swing.JButton jButton32;
+    public static javax.swing.JButton jButton33;
+    public static javax.swing.JButton jButton34;
+    public static javax.swing.JButton jButton35;
+    public static javax.swing.JButton jButton36;
+    public static javax.swing.JButton jButton37;
+    public static javax.swing.JButton jButton38;
+    public static javax.swing.JButton jButton39;
+    public static javax.swing.JButton jButton4;
+    public static javax.swing.JButton jButton40;
+    public static javax.swing.JButton jButton41;
+    public static javax.swing.JButton jButton42;
+    public static javax.swing.JButton jButton43;
+    public static javax.swing.JButton jButton44;
+    public static javax.swing.JButton jButton45;
+    public static javax.swing.JButton jButton46;
+    public static javax.swing.JButton jButton47;
+    public static javax.swing.JButton jButton48;
+    public static javax.swing.JButton jButton49;
+    public static javax.swing.JButton jButton5;
+    public static javax.swing.JButton jButton50;
+    public static javax.swing.JButton jButton51;
+    public static javax.swing.JButton jButton52;
+    public static javax.swing.JButton jButton53;
+    public static javax.swing.JButton jButton54;
+    public static javax.swing.JButton jButton55;
+    public static javax.swing.JButton jButton56;
+    public static javax.swing.JButton jButton57;
+    public static javax.swing.JButton jButton58;
+    public static javax.swing.JButton jButton59;
+    public static javax.swing.JButton jButton6;
+    public static javax.swing.JButton jButton60;
+    public static javax.swing.JButton jButton61;
+    public static javax.swing.JButton jButton62;
+    public static javax.swing.JButton jButton63;
+    public static javax.swing.JButton jButton64;
+    public static javax.swing.JButton jButton65;
+    public static javax.swing.JButton jButton66;
+    public static javax.swing.JButton jButton67;
+    public static javax.swing.JButton jButton68;
+    public static javax.swing.JButton jButton69;
+    public static javax.swing.JButton jButton7;
+    public static javax.swing.JButton jButton70;
+    public static javax.swing.JButton jButton71;
+    public static javax.swing.JButton jButton72;
+    public static javax.swing.JButton jButton73;
+    public static javax.swing.JButton jButton74;
+    public static javax.swing.JButton jButton75;
+    public static javax.swing.JButton jButton76;
+    public static javax.swing.JButton jButton77;
+    public static javax.swing.JButton jButton78;
+    public static javax.swing.JButton jButton79;
+    public static javax.swing.JButton jButton8;
+    public static javax.swing.JButton jButton80;
+    public static javax.swing.JButton jButton81;
+    public static javax.swing.JButton jButton82;
+    public static javax.swing.JButton jButton83;
+    public static javax.swing.JButton jButton84;
+    public static javax.swing.JButton jButton85;
+    public static javax.swing.JButton jButton86;
+    public static javax.swing.JButton jButton87;
+    public static javax.swing.JButton jButton88;
+    public static javax.swing.JButton jButton89;
+    public static javax.swing.JButton jButton9;
+    public static javax.swing.JButton jButton90;
+    public static javax.swing.JButton jButton91;
+    public static javax.swing.JButton jButton92;
+    public static javax.swing.JButton jButton93;
+    public static javax.swing.JButton jButton94;
+    public static javax.swing.JButton jButton95;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
