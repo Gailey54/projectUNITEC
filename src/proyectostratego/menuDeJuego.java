@@ -148,7 +148,7 @@ public class menuDeJuego extends javax.swing.JFrame {
         if (a==JOptionPane.NO_OPTION || a==JOptionPane.CANCEL_OPTION){
             JOptionPane.showMessageDialog(rootPane, "A JUGAR SE HA DICHO ENTONCES");
         }else{
-            manage.cerrarSesion();
+            manage.logout();
             Login ini=new Login();
             ini.setManage(manage);
             this.dispose();

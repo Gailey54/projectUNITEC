@@ -144,8 +144,8 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void chaPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaPassActionPerformed
-        String contraActual=jTextField1.getText();
-        String contraNueva=jTextField2.getText();
+        String contraActual=new String(jTextField1.getText());
+        String contraNueva=new String(jTextField2.getText());
         
         if (user.getContra().equals(contraActual)){
             user.setContra(contraNueva);
@@ -162,7 +162,8 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
         int a=JOptionPane.showConfirmDialog(rootPane, "¿Seguro?");
         if (a==JOptionPane.YES_OPTION){
-        new menuDeJuego(manage).setVisible(true);
+            manage.logout();
+            new menuDeJuego(manage).setVisible(true);
         }
     }//GEN-LAST:event_menuActionPerformed
 

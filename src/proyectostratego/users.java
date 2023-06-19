@@ -22,6 +22,19 @@ public class users {
        return contrasena;
    }
    
+   public int getPuntos(){
+       return puntos;
+   }
+   
+   public int getGamesVillanos(){
+       return gamesVillanos;
+   }
+   
+   public int getGamesHeroes(){
+       return gamesHeroes;
+   }
+   
+   
    public void setNombre(String username){
        this.username=username;
    }

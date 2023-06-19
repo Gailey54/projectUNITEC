@@ -8,7 +8,7 @@ import java.util.*;
 public class LogisticaSesion {
     private users usuarios[]=new users[1];
     private int usuariosDisponibles=0;
-    users actualUser;
+    users actualUser; users secondaryUser;
     
     //constructor
     public LogisticaSesion(){
