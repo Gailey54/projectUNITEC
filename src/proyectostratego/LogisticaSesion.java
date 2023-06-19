@@ -70,7 +70,7 @@ public class LogisticaSesion {
         return null;
     }
     
-    public String[] getAllUsername(){
+    public String[] getUsuarioTotales(){
         String usernames[]=new String[usuarios.length];
         
         for (int i=0;i<usuarios.length;i++){

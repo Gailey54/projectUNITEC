@@ -8,12 +8,14 @@ import javax.swing.*;
 
 public class cambioDeContraseña extends javax.swing.JFrame {
     users user;
+    LogisticaSesion manage;
     /**
      * Creates new form cambioDeContraseña
      */
-    public cambioDeContraseña(users user) {
+    public cambioDeContraseña(users user, LogisticaSesion manage) {
         initComponents();
         this.user=user;
+        this.manage=manage;
     }
 
     /**
@@ -158,8 +160,9 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     }//GEN-LAST:event_chaPassActionPerformed
 
     private void menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuActionPerformed
-        JOptionPane.showConfirmDialog(rootPane, "¿Esta Seguro?");
-        new menuDeJuego().setVisible(true);
+        JOptionPane.showConfirmDialog(rootPane, "Esta seguro");
+        
+        new menuDeJuego(manage).setVisible(true);
     }//GEN-LAST:event_menuActionPerformed
 
    

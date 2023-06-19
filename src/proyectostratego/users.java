@@ -24,7 +24,10 @@ public class users {
    
    public void setContra(String contrasena){
        this.contrasena=contrasena;
-       
-       
    }
+       
+   public boolean verificarUsuarioReal(String username, String contrasena){
+        return (this.getNombre().equals(username) && this.getContra().equals(contrasena));
+    }
+   
 }

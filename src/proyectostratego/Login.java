@@ -174,7 +174,7 @@ public class Login extends javax.swing.JFrame {
             return;
         }
         this.dispose();
-        new menuDeJuego().setVisible(true);
+        new menuDeJuego(manage).setVisible(true);
     }//GEN-LAST:event_iniciarSesionActionPerformed
 
     private void volverARegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverARegistroActionPerformed
