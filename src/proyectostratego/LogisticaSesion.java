@@ -6,17 +6,20 @@ package proyectostratego;
 
 import java.util.*;
 public class LogisticaSesion {
+    private static LogisticaSesion actual;
     private users usuarios[]=new users[1];
-    private int usuariosDisponibles=0;
+    private int usuarioHistoricos=0;
     users actualUser; users secondaryUser;
+    
     
     //constructor
     public LogisticaSesion(){
+        
     }
     
     
-    public int getUsuariosDisponibles(){
-        return usuariosDisponibles;
+    public int getUsuariosHistoricos(){
+        return usuarioHistoricos;
     }
     
     //Ver si no existe el usuario en el arreglo del objeto
@@ -36,9 +39,9 @@ public class LogisticaSesion {
         }
         users usuario=new users(username,contra);
         
-        if (usuariosDisponibles==0){
+        if (usuarioHistoricos==0){
             usuarios[0]=usuario;
-            usuariosDisponibles++;
+            usuarioHistoricos++;
             return true;
         }
         
@@ -51,7 +54,7 @@ public class LogisticaSesion {
         
         newuser[incremento-1]=usuario;
         usuarios=newuser;
-        usuariosDisponibles++;
+        usuarioHistoricos++;
         return true;
     }
     

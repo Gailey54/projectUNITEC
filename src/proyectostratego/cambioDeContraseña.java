@@ -12,10 +12,10 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     /**
      * Creates new form cambioDeContraseña
      */
-    public cambioDeContraseña(users user, LogisticaSesion manage) {
+    public cambioDeContraseña(users user) {
         initComponents();
         this.user=user;
-        this.manage=manage;
+        
     }
 
     /**

@@ -45,6 +45,9 @@ public class users {
        
    public boolean verificarUsuarioReal(String username, String contrasena){
         return (this.getNombre().equals(username) && this.getContra().equals(contrasena));
-    }
-   
+        
+}
+   public String impUsuarios(){
+       return "Username: "+username+"\npuntos: "+puntos+"\nPartidas ganadas con villanos: "+gamesVillanos+"\nPartidas ganadas con heroes: "+gamesHeroes;
+   }
 }

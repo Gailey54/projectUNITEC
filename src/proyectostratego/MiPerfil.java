@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyectostratego;
+import java.util.ArrayList;
 import javax.swing.*;
 /**
  *
@@ -11,13 +12,15 @@ import javax.swing.*;
 public class MiPerfil extends javax.swing.JFrame {
     users user;
     LogisticaSesion manage;
+    
     /**
      * Creates new form MiPerfil
      */
-    public MiPerfil(users user, LogisticaSesion manage) {
+    public MiPerfil(users user) {
         initComponents();
         this.user=user;
-        this.manage=manage;
+        
+        
     }
 
     /**
@@ -46,22 +49,14 @@ public class MiPerfil extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(300, 300));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Perfil.setEditable(false);
         Perfil.setBackground(new java.awt.Color(0, 51, 51));
         Perfil.setColumns(20);
         Perfil.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         Perfil.setForeground(new java.awt.Color(255, 255, 255));
         Perfil.setLineWrap(true);
         Perfil.setRows(5);
-        Perfil.setText("\t\tMI PERFIL\n");
-        Perfil.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                PerfilAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
+        Perfil.setText("\t\tMi Perfil");
         jScrollPane1.setViewportView(Perfil);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 450, 250));
@@ -116,12 +111,8 @@ public class MiPerfil extends javax.swing.JFrame {
     }//GEN-LAST:event_CuentaActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
-        new cambioDeContraseña(user,manage).setVisible(true);
+        new cambioDeContraseña(user).setVisible(true);
     }//GEN-LAST:event_PasswordActionPerformed
-
-    private void PerfilAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_PerfilAncestorAdded
-        
-    }//GEN-LAST:event_PerfilAncestorAdded
 
    
 
