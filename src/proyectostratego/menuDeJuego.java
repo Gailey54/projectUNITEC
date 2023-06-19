@@ -3,18 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package proyectostratego;
+import javax.swing.*;
 
 /**
  *
  * @author levir
  */
 public class menuDeJuego extends javax.swing.JFrame {
-
+    LogisticaSesion manage;
+    users usuarios;
     /**
      * Creates new form menuDeJuego
      */
-    public menuDeJuego() {
+    public menuDeJuego(LogisticaSesion manage) {
         initComponents();
+        this.manage=manage;
     }
 
     /**
@@ -118,7 +121,18 @@ public class menuDeJuego extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void STRATEGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_STRATEGOActionPerformed
-        // TODO add your handling code here:
+        JOptionPane cuadro=new JOptionPane();
+        String[] usuarioDisponibles=manage.getUsuarioTotales();
+        JComboBox<String> personas=new JComboBox<String>(usuarioDisponibles);
+        
+        if (usuarioDisponibles.length==1){
+            JOptionPane.showMessageDialog(rootPane, "Necesita al menos 2 jugadores para poder jugar este juego");
+        }else{
+            JOptionPane.showMessageDialog(rootPane, personas);
+            int lugar=personas.getSelectedIndex();
+            this.dispose();
+            new TableroOriginal().setVisible(true);
+        }
     }//GEN-LAST:event_STRATEGOActionPerformed
 
     private void universoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_universoActionPerformed
@@ -130,11 +144,21 @@ public class menuDeJuego extends javax.swing.JFrame {
     }//GEN-LAST:event_configActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
-        // TODO add your handling code here:
+        int a=JOptionPane.showConfirmDialog(rootPane, "¿Esta seguro de que quiere cerrar sesión?");
+        if (a==JOptionPane.NO_OPTION || a==JOptionPane.CANCEL_OPTION){
+            JOptionPane.showMessageDialog(rootPane, "A JUGAR SE HA DICHO ENTONCES");
+        }else{
+            manage.cerrarSesion();
+            Login ini=new Login();
+            ini.setManage(manage);
+            this.dispose();
+            new pruebadeImagen2().setVisible(true);
+        } 
+        
     }//GEN-LAST:event_logoutActionPerformed
 
     private void perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perfilActionPerformed
-        new MiPerfil().setVisible(true);
+        new MiPerfil(usuarios,manage).setVisible(true);
     }//GEN-LAST:event_perfilActionPerformed
 
     

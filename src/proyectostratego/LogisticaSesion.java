@@ -4,10 +4,7 @@
  */
 package proyectostratego;
 
-/**
- *
- * @author levir
- */
+import java.util.*;
 public class LogisticaSesion {
     private users usuarios[]=new users[1];
     private int usuariosDisponibles=0;
@@ -70,7 +67,7 @@ public class LogisticaSesion {
         return null;
     }
     
-    public String[] getAllUsername(){
+    public String[] getUsuarioTotales(){
         String usernames[]=new String[usuarios.length];
         
         for (int i=0;i<usuarios.length;i++){
@@ -80,7 +77,9 @@ public class LogisticaSesion {
         return usernames;
     }
     
-    public void cerrarSesion(){
+    public void logout(){
         actualUser=null;
     }
+    
+    
 }
