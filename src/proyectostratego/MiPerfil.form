@@ -86,8 +86,11 @@
                 </Property>
                 <Property name="lineWrap" type="boolean" value="true"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#x9;&#x9;MI PERFIL"/>
+                <Property name="text" type="java.lang.String" value="&#x9;&#x9;MI PERFIL&#xa;"/>
               </Properties>
+              <Events>
+                <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="PerfilAncestorAdded"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

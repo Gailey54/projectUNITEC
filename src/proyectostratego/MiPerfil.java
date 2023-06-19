@@ -52,7 +52,16 @@ public class MiPerfil extends javax.swing.JFrame {
         Perfil.setForeground(new java.awt.Color(255, 255, 255));
         Perfil.setLineWrap(true);
         Perfil.setRows(5);
-        Perfil.setText("\t\tMI PERFIL");
+        Perfil.setText("\t\tMI PERFIL\n");
+        Perfil.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                PerfilAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(Perfil);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 450, 250));
@@ -109,6 +118,10 @@ public class MiPerfil extends javax.swing.JFrame {
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         new cambioDeContraseña(user,manage).setVisible(true);
     }//GEN-LAST:event_PasswordActionPerformed
+
+    private void PerfilAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_PerfilAncestorAdded
+        
+    }//GEN-LAST:event_PerfilAncestorAdded
 
    
 

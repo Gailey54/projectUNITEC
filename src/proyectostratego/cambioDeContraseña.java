@@ -144,8 +144,8 @@ public class cambioDeContraseña extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void chaPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chaPassActionPerformed
-        String contraActual=new String(jTextField1.getText());
-        String contraNueva=new String(jTextField2.getText());
+        String contraActual=jTextField1.getText();
+        String contraNueva=jTextField2.getText();
         
         if (user.getContra().equals(contraActual)){
             user.setContra(contraNueva);
